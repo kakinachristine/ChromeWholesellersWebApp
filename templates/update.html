@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<h1>Chrome Wholesellers LTD</h1>
+<div class="row">
+    <div class="col-3"></div>
+<div class="col-6">
+    <h3 class="text-info text-center">Updating user</h3>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    {% endwith %}
+    <form action="" method="post">
+        <input value="{{ user.name }}" name="x" class="form-control" type="text" placeholder="Update name"> <br><br>
+        <input value="{{ user.email }}" name="y" class="form-control" type="email" placeholder="Update email"> <br><br>
+        <input value="{{ user.password }}" name="z" class="form-control" type="password" placeholder="Update password"> <br><br>
+        <input class="btn btn-outline-info btn-block" type="submit" value="update"> <br><br>
+        <a class="btn btn-outline-success btn-block" href="/login">Back</a>
+    </form>
+
+</div>
+<div class="col-3"></div>
+</div>
+</body>
+</html>
